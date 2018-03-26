@@ -1,0 +1,22 @@
+{
+    "name": "ubuntu/workspace",
+    "authors": [
+        {
+            "name": "First Last",
+            "email": "email@domain.com"
+        }
+    ],
+    "require" : {
+        "alesanchezr/wpas-wordpress-dash": "dev-master",
+        "wp-cli/wp-cli" : "~0.22",
+        "psy/psysh" : "~0.6"
+    },
+    "scripts" : {
+        "post-install-cmd" : [
+            "[[ -f /usr/bin/wp ]] || sudo ln -s ~workspace/vendor/wp-cli/wp-cli/bin/wp /usr/bin/wp",
+            "source ~workspace/vendor/wp-cli/wp-cli/utils/wp-completion.bash",
+        "[[ -f ~/.bash_profile ]] || touch ~/.bash_profile",
+            "source ~/.bash_profile"
+        ]
+    }
+}
