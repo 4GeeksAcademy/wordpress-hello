@@ -14,7 +14,7 @@ read -e sitename
 
 # accept the name of our website
 echo "Site Password: "
-read -e sitepassword
+read -s sitepassword
 
 # if the user didn't say no, then go ahead an install
 if [ "$run" == n ] ; then
@@ -33,14 +33,7 @@ PHP
 # parse the current directory name
 currentdirectory=${PWD##*/}
 
-# generate random 12 character password
-password=$(LC_CTYPE=C tr -dc A-Za-z0-9_\!\@\#\$\%\^\&\*\(\)-+= < /dev/urandom | head -c 12)
-
-# copy password to clipboard
-echo $password | pbcopy
-
 # create database, and install WordPress
-wp db create
 wp core install --url="http://$C9_HOSTNAME/$currentdirectory" --title="$sitename" --admin_user="$C9_USER" --admin_password="$sitepassword" --admin_email=$C9_EMAIL
 
 # discourage search engines
