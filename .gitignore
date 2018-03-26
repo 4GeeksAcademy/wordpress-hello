@@ -40,6 +40,9 @@
 # track readme.md in the root (i.e. do NOT ignore it)
 !README.md
 
+# track installation script
+!install.sh
+
 # ignore all files that start with ~
 ~*
 
