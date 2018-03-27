@@ -49,6 +49,16 @@ wp core install --url="http://$C9_HOSTNAME/$currentdirectory" --title="$sitename
 # discourage search engines
 wp option update blog_public 0
 
+# delete sample page, and create homepage
+wp post delete $(wp post list --post_type=page --posts_per_page=1 --post_status=publish --pagename="sample-page" --field=ID --format=ids)
+wp post create --post_type=page --post_title=Home --post_status=publish --post_author=$(wp user get $C9_USER --field=ID --format=ids)
+
+# set homepage as front page
+wp option update show_on_front 'page'
+
+# set homepage to be the new page
+wp option update page_on_front $(wp post list --post_type=page --post_status=publish --posts_per_page=1 --pagename=home --field=ID --format=ids)
+
 # set pretty urls
 wp rewrite structure '/%postname%/' --hard
 wp rewrite flush --hard
@@ -56,8 +66,6 @@ wp rewrite flush --hard
 # delete akismet and hello dolly
 wp plugin delete akismet
 wp plugin delete hello
-
-clear
 
 echo "================================================================="
 echo "Installation is complete. Your WordPress username/password is listed below."

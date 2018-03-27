@@ -1,19 +1,20 @@
 {
     "name": "ubuntu\/workspace",
-    "authors": [
+    "repositories": [
         {
-            "name": "First Last",
-            "email": "email@domain.com"
+            "type": "composer",
+            "url": "https://wpackagist.org"
         }
     ],
     "require": {
+        "wpackagist-plugin/advanced-custom-fields": "*",
         "alesanchezr\/wpas-wordpress-dash": "dev-master",
         "wp-cli\/wp-cli": "~0.22",
         "psy\/psysh": "~0.6"
     },
     "autoload": {
-        "psr-0": {
-            "src": "./wp-content/themes/the-fastest/src/php"
+        "psr-4": {
+            "Rigo\\": "wp-content/themes/rigo/src/php"
         }
     }
 }
