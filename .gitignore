@@ -82,15 +82,12 @@ Thumbs.db
 # "plugins" directory
 # and the whole "themes" directory
 wp-content/*
-!wp-content/plugins/
+wp-content/plugins/*
 !wp-content/themes/
 
 # ignore these plugins
 wp-content/plugins/hello.php
 wp-content/plugins/akismet
-wp-content/plugins/duplicator
-wp-content/plugins/w3-total-cache
-wp-content/plugins/wordpress-seo
 
 
 # ignore specific themes
