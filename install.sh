@@ -67,6 +67,9 @@ wp rewrite flush --hard
 wp plugin delete akismet
 wp plugin delete hello
 
+wp theme activate rigo
+wp plugin activate advanced-custom-fields
+
 echo "================================================================="
 echo "Installation is complete. Your WordPress username/password is listed below."
 echo ""
