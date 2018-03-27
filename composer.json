@@ -13,10 +13,9 @@
     },
     "scripts" : {
         "post-install-cmd" : [
-            "[[ -f /usr/bin/wp ]] || sudo ln -s ~workspace/vendor/wp-cli/wp-cli/bin/wp /usr/bin/wp",
-            "source ~workspace/vendor/wp-cli/wp-cli/utils/wp-completion.bash",
-        "[[ -f ~/.bash_profile ]] || touch ~/.bash_profile",
-            "source ~/.bash_profile"
+            "curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar",
+            "chmod +x wp-cli.phar",
+            "sudo mv wp-cli.phar /usr/local/bin/wp"
         ]
     }
 }
