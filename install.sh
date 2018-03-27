@@ -1,8 +1,16 @@
 #!/bin/bash -e
 
 echo "================================================================="
-echo "Awesome WordPress Installer!!"
+echo "4Geeks Academy WordPress Installer!!"
 echo "================================================================="
+
+echo "Running MySQL"
+mysql-ctl start
+
+# if the user didn't say no, then go ahead an install
+if [ "$run" == n ] ; then
+exit
+else
 
 # add a simple yes/no confirmation before we proceed
 echo "Run Install? (y/n)"
@@ -16,10 +24,6 @@ read -e sitename
 echo "Site Password: "
 read -s sitepassword
 
-# if the user didn't say no, then go ahead an install
-if [ "$run" == n ] ; then
-exit
-else
 
 # download the WordPress core files
 wp core download
