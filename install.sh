@@ -4,6 +4,12 @@ echo "================================================================="
 echo "4Geeks Academy WordPress Installer!!"
 echo "================================================================="
 
+echo "Installing wordpress cli"
+
+curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
+chmod +x wp-cli.phar
+sudo mv wp-cli.phar /usr/local/bin/wp
+
 echo "Running MySQL"
 mysql-ctl start
 
@@ -56,10 +62,10 @@ clear
 echo "================================================================="
 echo "Installation is complete. Your WordPress username/password is listed below."
 echo ""
-echo "Username: $C9_USER"
-echo "Password: $sitepassword"
+echo "Username: $C9_USER (for wordpress and your database)" 
+echo "Password: (whatever you specified earlier)"
 echo ""
-echo "And it was installed on your c9 mysql database"
+echo "To access your database: https://$C9_HOSTNAME/$currentdirectory/phpmyadmin"
 echo ""
 echo "================================================================="
 

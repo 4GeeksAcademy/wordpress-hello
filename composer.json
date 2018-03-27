@@ -1,21 +1,19 @@
 {
-    "name": "ubuntu/workspace",
+    "name": "ubuntu\/workspace",
     "authors": [
         {
             "name": "First Last",
             "email": "email@domain.com"
         }
     ],
-    "require" : {
-        "alesanchezr/wpas-wordpress-dash": "dev-master",
-        "wp-cli/wp-cli" : "~0.22",
-        "psy/psysh" : "~0.6"
+    "require": {
+        "alesanchezr\/wpas-wordpress-dash": "dev-master",
+        "wp-cli\/wp-cli": "~0.22",
+        "psy\/psysh": "~0.6"
     },
-    "scripts" : {
-        "post-install-cmd" : [
-            "curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar",
-            "chmod +x wp-cli.phar",
-            "sudo mv wp-cli.phar /usr/local/bin/wp"
-        ]
+    "autoload": {
+        "psr-0": {
+            "src": "./wp-content/themes/the-fastest/src/php"
+        }
     }
 }
