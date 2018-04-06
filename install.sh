@@ -67,6 +67,8 @@ fi
 echo "Running MySQL"
 mysql-ctl start
 
+phpmyadmin-ctl install
+
 # add a simple yes/no confirmation before we proceed
 print_question "Do you want to run the whole installation? (y/n)"
 read -e run
@@ -111,7 +113,7 @@ define( 'DISALLOW_FILE_EDIT', true );
 PHP
 
 # parse the current directory name
-wp core install --url="http://$C9_HOSTNAME/$baseSiteDirectory" --title="$sitename" --admin_user="$C9_USER" --admin_password="$sitepassword" --admin_email=$C9_EMAIL
+wp core install --url="https://$C9_HOSTNAME/$baseSiteDirectory" --title="$sitename" --admin_user="$C9_USER" --admin_password="$sitepassword" --admin_email=$C9_EMAIL
 
 # create database, and install WordPress
 
@@ -139,13 +141,15 @@ wp plugin delete hello
 wp theme activate rigo
 wp plugin activate advanced-custom-fields
 
+phpmyadminPath = "phpmyadmin"
 echo "================================================================="
 echo "Installation is complete. Your WordPress username/password is listed below."
 echo ""
 echo "Username: $C9_USER (for wordpress and your database)" 
 echo "Password: (whatever you specified earlier)"
 echo ""
-echo -e "To access your database: $blue\e[4mhttps://$C9_HOSTNAME/$baseSiteDirectory/phpmyadmin\e[0m"
+echo -e "To access your database: $blue\e[4mhttps://$C9_HOSTNAME/$baseSiteDirectory$phpmyadminPath\e[0m"
+echo -e "To access your site: $blue\e[4mhttps://$C9_HOSTNAME/$baseSiteDirectory\e[0m"
 echo ""
 echo "================================================================="
 
