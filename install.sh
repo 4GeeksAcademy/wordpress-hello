@@ -30,7 +30,7 @@ git --version > /dev/null
 GIT_IS_AVAILABLE=$?
 if [ $GIT_IS_AVAILABLE -eq 0 ]; 
     then echo "" 
-    else print_error "No wordpress installation found" 
+    else print_error "git not found, but is required. Please install git" 
 fi
 
 if [ -d "./wp-content" ]; 
