@@ -8,7 +8,7 @@ WordPress boilerplate for 4Geeks Academy students
 
 Use the Breathecode CLI
 ```bash
-$ breathecode start:wordpress
+$ bc start:wordpress -r
 ```
 Or use git
 ```bash
