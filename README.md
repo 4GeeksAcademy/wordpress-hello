@@ -4,9 +4,16 @@ WordPress boilerplate for 4Geeks Academy students
 
 ## Installation Procedure
 
+#### 0) Prerequisites
+
+Make sure you have nvm 8:
+```bash
+$ nvm install 8
+```
+
 #### 1) Start by installing the boilerplate
 
-Use the Breathecode CLI
+Use the [Breathecode CLI](https://github.com/breatheco-de/breathecode-cli)
 ```bash
 $ bc start:wordpress -r
 ```
