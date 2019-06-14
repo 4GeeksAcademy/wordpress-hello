@@ -3,7 +3,7 @@
 # http://ironco.de/bare-minimum-git/
 # ver 20150227
 #
-# This file is tailored for a WordPress project 
+# This file is tailored for a WordPress project
 # using the default directory structure
 #
 # This file specifies intentionally untracked files to ignore
@@ -95,3 +95,8 @@ wp-content/themes/twenty*/
 
 # ignore node/grunt dependency directories
 node_modules/
+
+#gitpod integration
+!.gitpod.yml
+!.gitpod.dockerfile
+!gitpod_config/
