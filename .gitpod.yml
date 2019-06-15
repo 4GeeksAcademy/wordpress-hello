@@ -1,24 +1,2 @@
 image:
   file: .gitpod.dockerfile
-ports:
-  - port: 8080
-  - port: 3306
-    onOpen: ignore
-tasks:
-  - name: MySQL
-    init: wp core download --path=$GITPOD_REPO_ROOT;
-    command: >
-        mysqld --initialize-insecure;
-        mysqld &
-        sleep 5;
-        cd $GITPOD_REPO_ROOT;
-        wp config create --dbname=wpclidemo --dbuser=root;
-        wp db create;
-        wp core install --url=$(gp url 8080) --title="WP-Gitpod" --admin_user=gitpod --admin_password=gitpod --admin_email=admin@email.com;
-  - name: Apache
-    command: >
-        apachectl start;
-  - name: WordPress
-    command: >
-        chmod 660 $GITPOD_REPO_ROOT/.htaccess;
-        cd $GITPOD_REPO_ROOT;
