@@ -42,6 +42,8 @@
 
 # track installation script
 !install.sh
+!install_on_production.sh
+!install_gitpod.sh
 
 # ignore all files that start with ~
 ~*
