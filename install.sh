@@ -11,23 +11,23 @@ fullpath=${PWD}
 baseSiteDirectory=$(echo $fullpath | sed 's/.*workspace//g')
 
 echo "================================================================="
-echo -e "$blue \e[0m WordPress Installer!!"
+echo "$blue \e[0m WordPress Installer!!"
 echo "================================================================="
 print_error () {
-    echo -e "$bgRed Error!\e[0m $red $1\e[0m"
+    echo "$bgRed Error!\e[0m $red $1\e[0m"
 }
 print_info () {
-    echo -e "$cyan $1\e[0m"
+    echo "$bgBlue $1\e[0m"
 }
 print_hint () {
-    echo -e "$bgBlue Hint:\e[0m $1"
+    echo "$bgBlue Hint:\e[0m $1"
 }
 print_question () {
-    echo -e "$bgCyan input>\e[0m $cyan $1 \e[0m"
+    echo "$bgCyan input>\e[0m $cyan $1 \e[0m"
 }
 
 if [ -f ./.env ]; then
-        print_info "Loading environment file..."
+        print_info "Loading (.env) environment file..."
         . ./.env
     else
         print_error "No .env file was found"
@@ -113,13 +113,13 @@ fi
 # parse the current directory name
 wp core install --url="$SITE_URL" --title="$SITE_NAME" --admin_user="$SITE_USER" --admin_password="$SITE_PASS" --admin_email="$SITE_EMAIL"
 
-if [ $? -ne 0 ]; then exit 0 fi
+
 # discourage search engines
 wp option update blog_public 0
 
 # delete sample page, and create homepage
 wp post delete $(wp post list --post_type=page --posts_per_page=1 --post_status=publish --pagename="sample-page" --field=ID --format=ids)
-wp post create --post_type=page --post_title=Home --post_status=publish --post_author=$(wp user get $C9_USER --field=ID --format=ids)
+wp post create --post_type=page --post_title=Home --post_status=publish --post_author=$(wp user get $SITE_USER --field=ID --format=ids)
 
 # set homepage as front page
 wp option update show_on_front 'page'
