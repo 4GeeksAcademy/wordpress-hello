@@ -102,3 +102,4 @@ node_modules/
 !gitpod_config/
 gitpod_config/mysql/data/*
 !.gitkeep
+!.htaccess.example
