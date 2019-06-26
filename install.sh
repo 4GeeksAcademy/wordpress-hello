@@ -1,4 +1,4 @@
-#!/bin/bash -e
+#!/bin/bash
 
 red='\e[31m'
 cyan='\e[33m'
@@ -27,8 +27,8 @@ print_question () {
 }
 
 if [ -f ./.env ]; then
-        print_info "Loading environment file"
-        source ./.env
+        print_info "Loading environment file..."
+        . ./.env
     else
         print_error "No .env file was found"
         exit 1
@@ -106,7 +106,7 @@ if [ -f "./wp-config.php" ];
     then
         print_info "wp-config.php successfully created..."
     else
-        print_error "NO wp-config.php was found"
+        print_error "The wp-config.php file could not be created, make sure your database credentials are ok."
         exit 1
 fi
 

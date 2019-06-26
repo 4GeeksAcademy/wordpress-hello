@@ -5,14 +5,6 @@ ports:
   onOpen: open-preview
 - port: 3306
 tasks:
-- name: Terminal
-  command: >
-    echo "Welcome!";
-    echo "Commands you can try:";
-    echo " * apachectl stop";
-    echo " * apachectl start";
-    echo " * gp open /var/log/apache2/access.log";
-    echo " * gp open /var/log/apache2/error.log";
 - name: Apache & MySQL
   command: >
     cp .env.example .env;
@@ -22,3 +14,11 @@ tasks:
     mysql -u root -e "CREATE DATABASE wordpress";
     apachectl start;
     multitail /var/log/apache2/access.log -I /var/log/apache2/error.log
+- name: Terminal
+  command: >
+    echo "Welcome!";
+    echo "Commands you can try:";
+    echo " * apachectl stop";
+    echo " * apachectl start";
+    echo " * gp open /var/log/apache2/access.log";
+    echo " * gp open /var/log/apache2/error.log";
