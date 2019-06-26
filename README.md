@@ -5,7 +5,7 @@ WordPress boilerplate for 4Geeks Academy students
 ## Installation Procedure
 
 #### 0) Prerequisites
-- Make sure you have nvm 8
+- Make sure you have nvm 8+
 
 #### 1) Start by installing the boilerplate
 
@@ -26,7 +26,7 @@ $ git clone git@github.com:4GeeksAcademy/wordpress-hello.git
 $ composer install
 ```
 
-#### 3) Run the installator
+#### 3) Create a .env file with your database and site information (on the workspace root) and run the run the installator
 ```bash
 $ bash install.sh
 ```
