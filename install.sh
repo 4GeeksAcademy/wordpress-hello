@@ -54,7 +54,7 @@ fi
 
 if [ -d "./wp-content" ];
     then
-        echo "Wordpress installation was found, proceeding..."
+        print_info "Wordpress installation was found, proceeding..."
     else
         print_error "No wordpress installation found"
         print_hint "Make sure you have a wp-content folder in the current directory:"
@@ -65,10 +65,10 @@ fi
 echo ""
 if [ -d "./vendor" ];
     then
-        echo "/vendor folder found, udating packages..."
+        print_info "/vendor folder found, udating packages..."
         composer update
     else
-        echo "NO /vendor folder found, installing packages from scratch..."
+        print_info "NO /vendor folder found, installing packages from scratch..."
         composer install
 fi
 
@@ -104,9 +104,9 @@ PHP
 echo ""
 if [ -f "./wp-config.php" ];
     then
-        echo "wp-config.php successfully created..."
+        print_info "wp-config.php successfully created..."
     else
-        echo "NO wp-config.php was found"
+        print_error "NO wp-config.php was found"
         exit 1
 fi
 
@@ -139,7 +139,7 @@ wp theme activate rigo
 wp plugin activate advanced-custom-fields
 
 echo "================================================================="
-echo "Installation is complete."
+print_info "Installation is complete."
 echo "================================================================="
 
 exit 0
