@@ -7,7 +7,7 @@ socket		= /var/run/mysqld/mysqld.sock
 nice		= 0
 
 [mysqld]
-user		= gitpod
+user		= root
 pid-file	= /var/run/mysqld/mysqld.pid
 socket		= /var/run/mysqld/mysqld.sock
 port		= 3306
@@ -35,5 +35,5 @@ expire_logs_days	= 10
 max_binlog_size     = 100M
 
 [client]
-user=gitpod
-password=gitpod
+user=root
+password=

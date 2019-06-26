@@ -5,22 +5,21 @@ WordPress boilerplate for 4Geeks Academy students
 ## Installation Procedure
 
 #### 0) Prerequisites
-
-Make sure you have nvm 8:
-```bash
-$ nvm install 8
-```
+- Make sure you have nvm 8
 
 #### 1) Start by installing the boilerplate
 
-Use the [Breathecode CLI](https://github.com/breatheco-de/breathecode-cli)
+There are 3 ways of installing this:
+
+1. Use the [Breathecode CLI](https://github.com/breatheco-de/breathecode-cli)
 ```bash
 $ bc start:wordpress -r
 ```
-Or use git
+2. Use git
 ```bash
 $ git clone git@github.com:4GeeksAcademy/wordpress-hello.git
 ```
+3. Just [click here](https://gitpod.io/#https://github.com/4GeeksAcademy/wordpress-hello) to use it with gitpod.
 
 #### 2) Install the composer packages
 ```bash
