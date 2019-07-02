@@ -18,7 +18,10 @@ tasks:
 - name: Terminal
   command: >
     echo "Welcome!";
-    echo "Commands you can try:";
+    echo "";
+    echo "To begin the wordpress intalation run: $ bash install.sh";
+    echo "";
+    echo "Start, stop or review Apache errors:";
     echo " * apachectl stop";
     echo " * apachectl start";
     echo " * gp open /var/log/apache2/access.log";

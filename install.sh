@@ -140,6 +140,12 @@ wp plugin activate advanced-custom-fields
 
 echo "================================================================="
 print_info "Installation is complete."
+
+echo "You can go ahead and chech your website at $SITE_URL"
+echo ""
+echo "Login to your wordpress with the following credentials:"
+echo "User: $SITE_USER"
+echo "Password: $SITE_PASS"
 echo "================================================================="
 
 exit 0
