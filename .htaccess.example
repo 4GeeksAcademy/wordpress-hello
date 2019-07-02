@@ -1,14 +1,14 @@
+SetEnvIf X-Forwarded-Proto https HTTPS
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
-
-    RewriteCond %{HTTP:X-Forwarded-Proto} !https
-    RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [R,L]
-
-	RewriteEngine On
-	RewriteBase /
-	RewriteRule ^index\.php$ - [L]
-	RewriteCond %{REQUEST_FILENAME} !-f
-	RewriteCond %{REQUEST_FILENAME} !-d
-	RewriteRule . /index.php [L]
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
 </IfModule>
 # END WordPress
+
+php_value upload_max_filesize 40M
+php_value post_max_size 42M
