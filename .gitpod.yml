@@ -9,8 +9,8 @@ tasks:
   command: >
     cp .env.example .env;
     cp .htaccess.example .htaccess;
-    mysqld --initialize-insecure;
-    mysqld &
+    mysqld --initialize-insecure --log-error=$GITPOD_REPO_ROOT/gitpod_config/mysql/logs/error.log --general-log-file=$GITPOD_REPO_ROOT/gitpod_config/mysql/logs/mysql.log --datadir=$GITPOD_REPO_ROOT/gitpod_config/mysql/data;
+    mysqld --log-error=$GITPOD_REPO_ROOT/gitpod_config/mysql/logs/error.log --general-log-file=$GITPOD_REPO_ROOT/gitpod_config/mysql/logs/mysql.log --datadir=$GITPOD_REPO_ROOT/gitpod_config/mysql/data &
     sleep 5;
     mysql -u root -e "CREATE DATABASE wordpress";
     apachectl start;
