@@ -99,6 +99,7 @@ node_modules/
 #gitpod integration
 !.gitpod.yml
 !.gitpod.dockerfile
+!.gitpod.Dockerfile
 !gitpod_config/
 gitpod_config/mysql/data/*
 !.gitkeep
