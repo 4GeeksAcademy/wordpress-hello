@@ -14,8 +14,8 @@ RUN apt-get update \
     && apt-get -y install apache2 \
     && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* \
     && chown -R gitpod:gitpod /var/run/apache2 /var/lock/apache2 /var/log/apache2 \
-    && echo "include ${HOME}/wordpress-hello/apache/apache.conf" > /etc/apache2/apache2.conf \
-    && echo ". ${HOME}/wordpress-hello/conf/envvars" > /etc/apache2/envvars \
+    && echo "include ${HOME}/wordpress-hello/gitpod_config/apache/apache.conf" > /etc/apache2/apache2.conf \
+    && echo ". ${HOME}/wordpress-hello/gitpod_config/apache/envvars" > /etc/apache2/envvars \
     && apt-get -y remove php* \
     && add-apt-repository ppa:ondrej/php \
     && apt-get update \
