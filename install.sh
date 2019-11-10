@@ -82,6 +82,7 @@ if [ -d "./wp-includes" ]; then
         fi
     else
         # download the WordPress core files
+        rm $fullpath/index.php
         wp core download
 fi
 
