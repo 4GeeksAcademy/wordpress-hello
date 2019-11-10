@@ -20,7 +20,7 @@ tasks:
   command: >
     echo "Welcome!";
     echo "";
-    echo "To begin the wordpress intalation run: $ bash install.sh";
+    echo "To begin the WordPress installation run: $ bash install.sh";
     echo "";
     echo "Start, stop or review Apache errors:";
     echo " * apachectl stop";
