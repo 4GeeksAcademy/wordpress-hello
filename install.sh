@@ -62,16 +62,6 @@ if [ -d "./wp-content" ];
         exit 1
 fi
 
-echo ""
-if [ -d "./vendor" ];
-    then
-        print_info "/vendor folder found, udating packages..."
-        composer update
-    else
-        print_info "NO /vendor folder found, installing packages from scratch..."
-        composer install
-fi
-
 wp --info > /dev/null
 WP_IS_AVAILABLE=$?
 if [ $WP_IS_AVAILABLE -eq 0 ];
@@ -137,6 +127,16 @@ wp plugin delete hello
 
 wp theme activate rigo
 wp plugin activate advanced-custom-fields
+
+echo ""
+if [ -d "./vendor" ];
+    then
+        print_info "/vendor folder found, udating packages..."
+        composer update
+    else
+        print_info "NO /vendor folder found, installing packages from scratch..."
+        composer install
+fi
 
 echo "================================================================="
 print_info "Installation is complete."
