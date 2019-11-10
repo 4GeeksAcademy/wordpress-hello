@@ -5,7 +5,7 @@ USER root
 
 RUN a2dismod mpm_event
 
-RUN apt-get update && apt-get -y install apache2 mysql-server php-curl php-gd php-mbstring php-xml php-xmlrpc phpmyadmin
+RUN apt-get update && apt-get -y install apache2 mysql-server php-curl php-gd php-mbstring php-xml php-xmlrpc
 
 RUN echo "include /workspace/wordpress-hello/gitpod_config/apache/apache.conf" > /etc/apache2/apache2.conf
 RUN echo ". /workspace/wordpress-hello/gitpod_config/apache/envvars" > /etc/apache2/envvars
