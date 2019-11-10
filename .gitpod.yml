@@ -4,6 +4,7 @@ ports:
 - port: 8080
   onOpen: open-preview
 - port: 3306
+  onOpen: ignore
 tasks:
 - name: Apache & MySQL
   command: >
@@ -14,7 +15,7 @@ tasks:
     sleep 5;
     mysql -u root -e "CREATE DATABASE wordpress";
     apachectl start;
-    multitail /var/log/apache2/access.log -I /var/log/apache2/error.log
+    multitail /workspace/wordpress-hello/gitpod_config/apache/logs/access.log -I /workspace/wordpress-hello/gitpod_config/apache/logs/error.log
 - name: Terminal
   command: >
     echo "Welcome!";
@@ -26,3 +27,4 @@ tasks:
     echo " * apachectl start";
     echo " * gp open /var/log/apache2/access.log";
     echo " * gp open /var/log/apache2/error.log";
+  openMode: split-right
