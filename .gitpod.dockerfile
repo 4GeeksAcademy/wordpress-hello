@@ -3,6 +3,8 @@ FROM gitpod/workspace-full
 
 USER root
 
+RUN a2dismod rewrite
+
 RUN apt-get update && apt-get -y install apache2 mysql-server php-curl php-gd php-mbstring php-xml php-xmlrpc
 
 RUN echo "include /workspace/wordpress-hello/gitpod_config/apache/apache.conf" > /etc/apache2/apache2.conf
@@ -19,7 +21,3 @@ RUN curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli
 
 RUN chmod +x wp-cli.phar
 RUN sudo mv wp-cli.phar /usr/local/bin/wp
-
-
-RUN a2dismod rewrite
-RUN service apache2 reload
