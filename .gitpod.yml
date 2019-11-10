@@ -18,6 +18,9 @@ tasks:
     multitail /workspace/wordpress-hello/gitpod_config/apache/logs/access.log -I /workspace/wordpress-hello/gitpod_config/apache/logs/error.log
 - name: Terminal
   command: >
+    echo "";
+    echo "";
+    echo "";
     echo "Welcome!";
     echo "";
     echo "To begin the WordPress installation run: $ bash install.sh";
