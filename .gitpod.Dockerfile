@@ -2,9 +2,7 @@ FROM gitpod/workspace-full
 
 USER root
 
-RUN apt-get update
-RUN apt-get -y install mysql-server
-#RUN apt-get update && apt-get -y install apache2 php-curl php-gd php-mbstring php-xml php-xmlrpc
+#RUN apt-get update && apt-get -y install apache2 mysql-server php-curl php-gd php-mbstring php-xml php-xmlrpc
 
 #RUN echo ". /workspace/wordpress-hello/gitpod_config/apache/envvars" > /etc/apache2/envvars
 #RUN echo "include /workspace/wordpress-hello/gitpod_config/apache/apache.conf" > /etc/apache2/apache2.conf
