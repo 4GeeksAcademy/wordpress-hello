@@ -1,6 +1,6 @@
 FROM mattrayner/lamp:latest-1804
 
-#PORT 80
+PORT 80
 #USER root
 
 #RUN curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
