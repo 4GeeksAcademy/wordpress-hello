@@ -8,6 +8,7 @@
     ],
     "require": {
         "wpackagist-plugin/advanced-custom-fields": "*",
+        "wpackagist-plugin/wp-phpmyadmin-extension": "*",
         "alesanchezr\/wpas-wordpress-dash": "dev-master",
         "wp-cli\/wp-cli": "~0.22",
         "psy\/psysh": "~0.6"
