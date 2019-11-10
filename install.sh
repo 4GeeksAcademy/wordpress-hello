@@ -104,6 +104,15 @@ fi
 # parse the current directory name
 wp core install --url="$SITE_URL" --title="$SITE_NAME" --admin_user="$SITE_USER" --admin_password="$SITE_PASS" --admin_email="$SITE_EMAIL"
 
+echo ""
+if [ -d "./vendor" ];
+    then
+        print_info "/vendor folder found, udating packages..."
+        composer update
+    else
+        print_info "NO /vendor folder found, installing packages from scratch..."
+        composer install
+fi
 
 # discourage search engines
 wp option update blog_public 0
@@ -128,16 +137,6 @@ wp plugin delete hello
 
 wp theme activate rigo
 wp plugin activate advanced-custom-fields
-
-echo ""
-if [ -d "./vendor" ];
-    then
-        print_info "/vendor folder found, udating packages..."
-        composer update
-    else
-        print_info "NO /vendor folder found, installing packages from scratch..."
-        composer install
-fi
 
 echo "================================================================="
 print_info "Installation is complete."
