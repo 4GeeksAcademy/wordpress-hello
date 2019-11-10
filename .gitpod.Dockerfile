@@ -53,3 +53,9 @@ RUN wget -q https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli
     && chmod +x $HOME/wp-cli.phar \
     && mv $HOME/wp-cli.phar /usr/local/bin/wp \
     && chown gitpod:gitpod /usr/local/bin/wp
+
+# - download Adminer from https://www.adminer.org/
+USER gitpod
+RUN mkdir $HOME/wordpress-hello/adminer/ \
+    && wget -q https://github.com/vrana/adminer/releases/download/v4.7.4/adminer-4.7.4-mysql.php \
+        -O $HOME/wordpress-hello/adminer/index.php
