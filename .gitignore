@@ -104,3 +104,4 @@ gitpod_config/mysql/data/*
 !.gitkeep
 !.htaccess.example
 !index.php
+!rigo-baby.jpg
