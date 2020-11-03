@@ -1,5 +1,5 @@
 <div style="text-align: center;">
-    <img src="https://ucarecdn.com/3a0e7d8b-25f3-4e2f-add2-016064b04075/rigobaby.jpg" />
+    <img src="https://github.com/4GeeksAcademy/wordpress-hello/blob/910c763722388c6bda785e89a12b79ba0694623b/rigo-baby.jpg?raw=true" />
     <h2>Hello Geek, welcome to WordPress!</h2>
     <p>If you see this screen, you probably have to run the installation script by typing:</p>
     <p style="background: grey; color: white; font-size: 20px;">$ bash install.sh</p>
