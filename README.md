@@ -1,6 +1,6 @@
 # WordPress Boilerplate for Professional Development
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io#https://gitpod.io/#https://github.com/4GeeksAcademy/wordpress-hello)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/4GeeksAcademy/wordpress-hello)
 
 1. Dockerfile for a working LAMP environment with PHP 7.2.19 and PHPMyAdmin.
 2. WordPress CLI (WP CLI).
