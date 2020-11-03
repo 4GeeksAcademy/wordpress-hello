@@ -2,7 +2,7 @@
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/4GeeksAcademy/wordpress-hello)
 
-![https://github.com/4GeeksAcademy/wordpress-hello/blob/master/gitpod_config/cover.png?raw=true](https://www.loom.com/share/865fde325efa4aac9ccc473513a42d09)
+[![Video Tutorial about this boilerplate](https://github.com/4GeeksAcademy/wordpress-hello/blob/master/gitpod_config/cover.png?raw=true)](https://www.loom.com/share/865fde325efa4aac9ccc473513a42d09)
 
 1. Dockerfile for a working LAMP environment with PHP 7.2.19 and PHPMyAdmin.
 2. WordPress CLI (WP CLI).
