@@ -1,6 +1,6 @@
 # WordPress Boilerplate for Professional Development
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/4GeeksAcademy/wordpress-hello)
+<img src="https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/4GeeksAcademy/wordpress-hello" align="right" />
 
 [![Video Tutorial about this boilerplate](https://github.com/4GeeksAcademy/wordpress-hello/blob/master/gitpod_config/cover.png?raw=true)](https://www.loom.com/share/865fde325efa4aac9ccc473513a42d09)
 
