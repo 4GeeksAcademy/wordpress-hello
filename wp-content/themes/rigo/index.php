@@ -15,6 +15,7 @@ $args = wpas_get_view_data();
         <p>Now you have to start building your <a href="https://github.com/alesanchezr/wpas-wordpress-dash/blob/master/src/WPAS/Controller/API.md">API endpoints</a> and <a href="https://github.com/alesanchezr/wpas-wordpress-dash/tree/master/src/WPAS/Types">Entities (Custom Post Types)</a>.</p>
         <p>Here are some useful links:</p>
         <ul>
+            <li><a href="https://www.loom.com/share/865fde325efa4aac9ccc473513a42d09">Video Tutorial on how to use this boilerplate</a></li>
             <li><a href="<?php echo get_site_url(); ?>/wp-admin">Login into the WordPress admin dashboard.</a></li>
             <li>You can download the <a href="https://www.getpostman.com/apps">postman client here.</a></li>
             <li>
