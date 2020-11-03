@@ -1,6 +1,8 @@
+# WordPress Boilerplate for Professional Development
+
 <a href="https://gitpod.io/#https://github.com/4GeeksAcademy/wordpress-hello"><img src="https://gitpod.io/button/open-in-gitpod.svg" align="right" /></a>
 
-# WordPress Boilerplate for Professional Development
+Headless WordPress Boilerplate to start a new project in WordPress in just 2 minutes, with MVC API generation like any other modern framework like Express, Flask or Slim PHP.
 
 [![Video Tutorial about this boilerplate](https://github.com/4GeeksAcademy/wordpress-hello/blob/master/gitpod_config/cover.png?raw=true)](https://www.loom.com/share/865fde325efa4aac9ccc473513a42d09)
 
