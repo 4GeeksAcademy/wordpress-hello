@@ -16,8 +16,15 @@ $args = wpas_get_view_data();
         <p>Here are some useful links:</p>
         <ul>
             <li><a href="<?php echo get_site_url(); ?>/wp-admin">Login into the WordPress admin dashboard.</a></li>
-            <li>This is a endpoint: GET: <a href="<?php echo get_site_url(); ?>/wp-json/sample_api/v1/courses">/courses</a></li>
             <li>You can download the <a href="https://www.getpostman.com/apps">postman client here.</a></li>
+            <li>
+                <p style="margin-top: 0;">These are some examples of API endpoints you can code:</p>
+                <ol style="background-color: #BDBDBD; padding: 10px 10px 10px 30px; display: inline-block;">
+                    <li> GET course: <a href="<?php echo get_site_url(); ?>/wp-json/sample_api/v1/course">/course</a></li>
+                    <li> GET single course: <a href="<?php echo get_site_url(); ?>/wp-json/sample_api/v1/course/1">/course/1</a></li>
+                    <li> Create new course: POST to /wp-json/sample_api/v1/course</li>
+                </ol>
+            </li>
         </ul>
         <p style="text-align: center; margin-top: 100px;"><small>Made with <span style="color: red;">♥️</span>at <a target="_blank" href="https://4geeksacademy.com">4Geeks Academy</a></small></p>
     <?php wp_footer() ?>

@@ -38,24 +38,32 @@ class SampleController{
             'post_title'    => $body->title,
             ]);
             return $id;
-        }
-        
-        
-        /**
-         * Using Custom Post types to add new properties to the course
-         */
-        public function getCoursesWithCustomFields(WP_REST_Request $request){
-            
-            $courses = [];
-            $query = Course::all([ 'status' => 'draft' ]);
-            foreach($query->posts as $course){
-                $courses[] = array(
-                    "ID" => $course->ID,
-                    "post_title" => $course->post_title,
-                    "schedule_type" => get_field('schedule_type', $course->ID)
-                );
-            }
-            return $courses;
-        }
     }
+
+    
+    public function deleteCourse(WP_REST_Request $request){
+        $id = (string) $request['id'];
+        // result is true on success, false on failure
+        $result = Course::delete($id);
+        return $result;
+    }
+        
+        
+    /**
+     * Using Custom Post types to add new properties to the course
+     */
+    public function getCoursesWithCustomFields(WP_REST_Request $request){
+        
+        $courses = [];
+        $query = Course::all([ 'status' => 'draft' ]);
+        foreach($query->posts as $course){
+            $courses[] = array(
+                "ID" => $course->ID,
+                "post_title" => $course->post_title,
+                "schedule_type" => get_field('schedule_type', $course->ID)
+            );
+        }
+        return $courses;
+    }
+}
 ?>
