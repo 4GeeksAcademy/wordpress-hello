@@ -6,6 +6,8 @@ Headless WordPress Boilerplate to start a new project in WordPress in just 2 min
 
 [![Video Tutorial about this boilerplate](https://github.com/4GeeksAcademy/wordpress-hello/blob/master/gitpod_config/cover.png?raw=true)](https://www.loom.com/share/865fde325efa4aac9ccc473513a42d09)
 
+## Features
+
 1. Dockerfile for a working LAMP environment with PHP 7.2.19 and PHPMyAdmin.
 2. WordPress CLI (WP CLI).
 3. Support for `.env` file to easily publish into production with environment variables.
