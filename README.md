@@ -1,6 +1,12 @@
 # WordPress Boilerplate for Professional Development
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io#https://github.com/4GeeksAcademy/wordpress-hello)
+<a href="https://gitpod.io/#https://github.com/4GeeksAcademy/wordpress-hello"><img src="https://gitpod.io/button/open-in-gitpod.svg" align="right" /></a>
+
+Headless WordPress Boilerplate to start a new project in WordPress in just 2 minutes, with MVC API generation like any other modern framework like Express, Flask or Slim PHP.
+
+[![Video Tutorial about this boilerplate](https://github.com/4GeeksAcademy/wordpress-hello/blob/master/gitpod_config/cover.png?raw=true)](https://www.loom.com/share/865fde325efa4aac9ccc473513a42d09)
+
+## Features
 
 1. Dockerfile for a working LAMP environment with PHP 7.2.19 and PHPMyAdmin.
 2. WordPress CLI (WP CLI).

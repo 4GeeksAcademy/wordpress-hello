@@ -13,4 +13,8 @@ $api = new \WPAS\Controller\WPASAPIController([
 /**
  * Then you can start adding each endpoint one by one
 */
-$api->get([ 'path' => '/courses', 'controller' => 'SampleController:getDraftCourses' ]); 
+// $api->get([ 'path' => '/course', 'controller' => 'SampleController:getCourses' ]); 
+$api->get([ 'path' => '/course/(?P<id>[\d]+)', 'controller' => 'SampleController:getSingleCourse' ]); 
+$api->delete([ 'path' => '/course/(?P<id>[\d]+)', 'controller' => 'SampleController:deleteCourse' ]); 
+$api->post([ 'path' => '/course', 'controller' => 'SampleController:createCourse' ]); 
+$api->get([ 'path' => '/course', 'controller' => 'SampleController:getCoursesWithCustomFields' ]); 
