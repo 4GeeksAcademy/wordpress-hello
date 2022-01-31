@@ -1,5 +1,4 @@
-| ---------|
-| 🚨 WARNING 🚨 This repository its not maintained anymore, we don't recomend using anymore.
+| 🚨 WARNING 🚨 This repository its not maintained anymore, we don't recomend using anymore. |
 | ---------|
 
 # WordPress Boilerplate for Professional Development
